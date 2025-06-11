@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "commit": "git-cz",
     "prepare": "husky",
+    "lint:stylelint": "stylelint \"./**/*.{vue,css,scss,html}\" --fix",
     "lint:lint-staged": "eslint --fix"
   },
   "config": {
@@ -46,6 +47,17 @@
     ]
   },
   "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "stylelint --fix --allow-empty-input"
+    ],
+    "*.{scss,css,less}": [
+      "stylelint --fix --allow-empty-input",
+      "prettier --write"
+    ],
     "*": "eslint --fix"
   }
 }
