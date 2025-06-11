@@ -1,8 +1,8 @@
 {
   "name": "springrain-web",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
@@ -12,13 +12,20 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.14.1",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.28.0",
+    "sass-embedded": "^1.89.2",
+    "stylelint": "^16.20.0",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-recommended-scss": "^15.0.1",
+    "stylelint-config-recommended-vue": "^1.6.0",
+    "stylelint-config-standard": "^38.0.0",
     "typescript": "~5.8.3",
     "vite": "^6.3.5",
-    "vue-tsc": "^2.2.8",
-    "@antfu/eslint-config": "^4.14.1",
-    "eslint": "^9.28.0"
+    "vue-tsc": "^2.2.8"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

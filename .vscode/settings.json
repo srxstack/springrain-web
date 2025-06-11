@@ -1,4 +1,5 @@
 {
+  // antfu conf start
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnSave": false,
@@ -47,5 +48,10 @@
     "scss",
     "pcss",
     "postcss"
-  ]
+  ],
+  // antfu conf end
+  // 保存的时候自动格式化Style
+  "stylelint.validate": ["css", "scss", "vue", "html"],
+  // Vue 模板中内联事件处理函数的参数提示
+  "vue.inlayHints.inlineHandlerLeading": true
 }
