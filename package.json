@@ -10,7 +10,7 @@
     "commit": "git-cz",
     "prepare": "husky",
     "lint:stylelint": "stylelint \"./**/*.{vue,css,scss,html}\" --fix",
-    "lint:lint-staged": "eslint --fix"
+    "fix": "eslint --fix"
   },
   "config": {
     "commitizen": {
