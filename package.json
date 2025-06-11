@@ -57,6 +57,7 @@
     "*.{scss,css,less}": [
       "stylelint --fix --allow-empty-input",
       "prettier --write"
-    ]
+    ],
+    "*": "eslint --fix"
   }
 }
