@@ -53,5 +53,10 @@
   // 保存的时候自动格式化Style
   "stylelint.validate": ["css", "scss", "vue", "html"],
   // Vue 模板中内联事件处理函数的参数提示
-  "vue.inlayHints.inlineHandlerLeading": true
+  "vue.inlayHints.inlineHandlerLeading": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "eslint.config.js": "stylelint.config.js, .stylelintignore"
+  }
 }
