@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { generateArray } from '@/utils/tools'
 import HelloWorld from './components/HelloWorld.vue'
+
+console.warn(generateArray(20))
 </script>
 
 <template>
