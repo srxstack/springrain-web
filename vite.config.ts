@@ -3,6 +3,8 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
 import { defineConfig, loadEnv } from 'vite'
 
 // https://cn.vitejs.dev/config/
@@ -51,8 +53,13 @@ export default ({ mode }: ConfigEnv) => {
     },
     plugins: [
       vue(),
+      // 自动导入 components 下面的组件，无需 import 引入
+      Components({
+        resolvers: [ElementPlusResolver()], // element-plus
+      }),
       AutoImport({
         imports: ['vue'], // 需要自动引入的库。例如 vue vue-router pinia
+        resolvers: [ElementPlusResolver()], // element-plus
         dts: 'src/types/auto-imports.d.ts', // pnpm dev 之后生成的import文件
         eslintrc: {
         // 这里先设置成true然后pnpm dev 运行之后会生成 .auto-import.json 文件之后，在改为false

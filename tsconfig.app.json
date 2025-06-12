@@ -9,6 +9,9 @@
       "@/*": ["src/*"]
     },
 
+    /* element-plus */
+    "types": ["element-plus/global"],
+
     /* Linting */
     "strict": true,
     "noFallthroughCasesInSwitch": true,
